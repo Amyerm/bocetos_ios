@@ -16,6 +16,8 @@
 		FBCA37E12C9B2B7400985A27 /* boceto_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37E02C9B2B7400985A27 /* boceto_1Tests.swift */; };
 		FBCA37EB2C9B2B7400985A27 /* boceto_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37EA2C9B2B7400985A27 /* boceto_1UITests.swift */; };
 		FBCA37ED2C9B2B7400985A27 /* boceto_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37EC2C9B2B7400985A27 /* boceto_1UITestsLaunchTests.swift */; };
+		FBCA37FB2C9B364900985A27 /* Cita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37FA2C9B364900985A27 /* Cita.swift */; };
+		FBCA37FE2C9B36E600985A27 /* generador_de_citas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37FD2C9B36E600985A27 /* generador_de_citas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FBCA37E62C9B2B7400985A27 /* boceto_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = boceto_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCA37EA2C9B2B7400985A27 /* boceto_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boceto_1UITests.swift; sourceTree = "<group>"; };
 		FBCA37EC2C9B2B7400985A27 /* boceto_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boceto_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FBCA37FA2C9B364900985A27 /* Cita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cita.swift; sourceTree = "<group>"; };
+		FBCA37FD2C9B36E600985A27 /* generador_de_citas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generador_de_citas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		FBCA37C82C9B2B7300985A27 /* boceto_1 */ = {
 			isa = PBXGroup;
 			children = (
+				FBCA37FC2C9B36B200985A27 /* controlador */,
+				FBCA37F92C9B362600985A27 /* modelo */,
 				FBCA37C92C9B2B7300985A27 /* AppDelegate.swift */,
 				FBCA37CB2C9B2B7300985A27 /* SceneDelegate.swift */,
 				FBCA37CD2C9B2B7300985A27 /* ViewController.swift */,
@@ -125,6 +131,22 @@
 				FBCA37EC2C9B2B7400985A27 /* boceto_1UITestsLaunchTests.swift */,
 			);
 			path = boceto_1UITests;
+			sourceTree = "<group>";
+		};
+		FBCA37F92C9B362600985A27 /* modelo */ = {
+			isa = PBXGroup;
+			children = (
+				FBCA37FA2C9B364900985A27 /* Cita.swift */,
+			);
+			path = modelo;
+			sourceTree = "<group>";
+		};
+		FBCA37FC2C9B36B200985A27 /* controlador */ = {
+			isa = PBXGroup;
+			children = (
+				FBCA37FD2C9B36E600985A27 /* generador_de_citas.swift */,
+			);
+			path = controlador;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +282,8 @@
 			files = (
 				FBCA37CE2C9B2B7300985A27 /* ViewController.swift in Sources */,
 				FBCA37CA2C9B2B7300985A27 /* AppDelegate.swift in Sources */,
+				FBCA37FE2C9B36E600985A27 /* generador_de_citas.swift in Sources */,
+				FBCA37FB2C9B364900985A27 /* Cita.swift in Sources */,
 				FBCA37CC2C9B2B7300985A27 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
