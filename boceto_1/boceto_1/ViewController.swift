@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBSegueAction func moviendome_de_pantalla(_ coder: NSCoder) -> ControladorVistaCitas? {
+        return ControladorVistaCitas(titulo_secundario: "Nombre Barbaro", coder: coder)
+    }
+    
 }
 

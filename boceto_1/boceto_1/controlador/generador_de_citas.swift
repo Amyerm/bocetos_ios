@@ -10,8 +10,6 @@ import Foundation
 class GeneradorDeCitas{
     var citas_creadas: Array<Cita>
     
-    
-    
     init(){
         citas_creadas = []
     }
