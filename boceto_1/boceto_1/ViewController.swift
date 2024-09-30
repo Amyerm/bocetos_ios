@@ -34,33 +34,14 @@ class ViewController: UIViewController {
     
     @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue)
     {
-        if let pantalla_cita = segue.source as? ControladorPantallaCitas{
-            citas_disponibles.agregar_cita(pantalla_citas.cita_actual.que_dijo, quien_lo_dijo: pantalla_citas.cita_actual.quien_lo_dijo)
-        }
-        // print(pantalla_citas?.cita_actual.texto)
-                
-                /*
-                if let pantalla_citas = segue.source as? ControladorPantallaCitas {
-                    citas_disponibles.agregar_cita(pantalla_citas.cita_actual.texto,
-                                                   quien_lo_dijo: pantalla_citas.cita_actual.nombre)
+        if let pantalla_cita = segue.source as? ControladorGeneradorCita {
+                // Solo agrega la cita si se ha creado una
+                if let citaCreada = pantalla_cita.cita_creada {
+                    citas_disponibles.agregar_cita(citaCreada)
                 }
-                else{
-                    print("Eso no era un objeto de tipo <ControladorPantallaCitas>")
-                }
-                 */
-                
-                
-                actualizar_cantidad()
-                
             }
-            
-            /*@IBAction func regresar(segue: UIStoryboardSegue){
-                print("En esto del proceso")
-                print(segue.source as? ControladorPantallaCitas)
-                let elemento = segue.source as? ControladorPantallaCitas
-                print(elemento?.cita_actual.nombre)
-            }*/
+            actualizar_cantidad()
+    }
     
-
 }
 
