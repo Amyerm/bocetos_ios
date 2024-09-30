@@ -13,7 +13,7 @@ class ControladorPantallaCitas: UIViewController {
     
     @IBOutlet weak var que_dijo_muro_texto: UILabel!
     
-    var cita_actual: Cita
+    var cita_actual: Cita?
         
         required init?(coder: NSCoder) {
         
@@ -34,8 +34,7 @@ class ControladorPantallaCitas: UIViewController {
         }
         
         func inicializar_pantalla(){
-            nombre_de_quien_lo_dijo.text = cita_actual.nombre
-            que_dijo_muro_texto.text = cita_actual.texto
+            nombre_de_quien_lo_dijo.text = cita_actual?.nombre
+            que_dijo_muro_texto.text = cita_actual?.texto
         }
-
 }

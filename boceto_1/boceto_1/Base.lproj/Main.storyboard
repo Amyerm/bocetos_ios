@@ -220,6 +220,7 @@
                         <viewLayoutGuide key="safeArea" id="IfV-KD-KPs"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wPL-4h-ug4"/>
                     <connections>
                         <outlet property="nombre_de_quien_lo_dijo" destination="fiZ-6D-iLr" id="Iyp-uq-51j"/>
                         <outlet property="que_dijo_muro_texto" destination="sZ5-Cb-ZPX" id="V7p-Ed-UmX"/>
@@ -254,6 +255,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="agregar_cita_nueva:" destination="2Lu-6t-L9F" eventType="touchUpInside" id="syc-fp-eDW"/>
+                                    <segue destination="3ea-j0-wDs" kind="presentation" identifier="irAPantallaCitas" id="YpE-50-Tbs"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14r-Hi-5Br">
@@ -422,6 +424,9 @@
             <point key="canvasLocation" x="39" y="682"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YpE-50-Tbs"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
