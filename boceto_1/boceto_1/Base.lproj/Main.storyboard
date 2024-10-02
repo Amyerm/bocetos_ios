@@ -56,17 +56,17 @@
                                 <rect key="frame" x="151.66666666666666" y="238.66666666666663" width="90" height="400"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dz-2f-WX8">
-                                        <rect key="frame" x="7.3333333333333428" y="182.33333333333334" width="75" height="35"/>
+                                        <rect key="frame" x="2" y="182.33333333333334" width="85.666666666666671" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Generar"/>
                                         <connections>
                                             <segue destination="2Lu-6t-L9F" kind="show" id="sw9-JJ-WOt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abE-s1-1QO">
-                                        <rect key="frame" x="7.3333333333333428" y="34.000000000000028" width="75" height="35"/>
+                                        <rect key="frame" x="17.666666666666689" y="34.000000000000028" width="54.333333333333343" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cita"/>
                                         <connections>
                                             <segue destination="3ea-j0-wDs" kind="show" destinationCreationSelector="al_abrir_pantalla_citas:" id="avY-nc-Rrx"/>
                                         </connections>
@@ -240,22 +240,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H8-8P-qUF">
-                                <rect key="frame" x="32" y="35" width="75" height="35"/>
+                                <rect key="frame" x="38" y="35" width="64" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Atras"/>
                                 <connections>
                                     <segue destination="VeI-AB-gDy" kind="unwind" unwindAction="volver_a_pantalla_inicioWithSegue:" id="c14-sc-DRy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-qR-sn8">
-                                <rect key="frame" x="159" y="678" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="agregar_cita_nueva:" destination="2Lu-6t-L9F" eventType="touchUpInside" id="syc-fp-eDW"/>
-                                    <segue destination="3ea-j0-wDs" kind="presentation" identifier="irAPantallaCitas" id="YpE-50-Tbs"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14r-Hi-5Br">
@@ -393,8 +383,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-Tf-I06">
-                                <rect key="frame" x="137" y="107" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-Tf-I06">
+                                <rect key="frame" x="99" y="137" width="194" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -402,12 +392,22 @@
                                     <action selector="quien_lo_dijo_view:" destination="7Yd-VA-zMc" eventType="editingDidEnd" id="B6X-JD-iO7"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-b2-uSw">
-                                <rect key="frame" x="137" y="163" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cita" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-b2-uSw">
+                                <rect key="frame" x="99" y="193" width="194" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiX-qR-sn8">
+                                <rect key="frame" x="144" y="656" width="105" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enviar Cita"/>
+                                <connections>
+                                    <action selector="agregar_cita_nueva:" destination="2Lu-6t-L9F" eventType="touchUpInside" id="syc-fp-eDW"/>
+                                    <segue destination="3ea-j0-wDs" kind="presentation" identifier="irAPantallaCitas" id="YpE-50-Tbs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m1f-2E-gsJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -421,11 +421,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4f-gK-0G9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7Yd-VA-zMc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="39" y="682"/>
+            <point key="canvasLocation" x="38.931297709923662" y="681.69014084507046"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YpE-50-Tbs"/>
+        <segue reference="avY-nc-Rrx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

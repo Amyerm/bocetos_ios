@@ -11,16 +11,13 @@ class ViewController: UIViewController {
     
     var cita_para_enviar: Cita = Cita(quien_lo_dijo: "Creeper", que_dijo: "Tssseñor")
     var citas_disponibles: GeneradorDeCitas = GeneradorDeCitas()
-    var numero_aleatorio: Int = Int.random(in: 0...25)
         
     @IBOutlet weak var labelcito: UILabel!
     
     override func viewDidLoad() {
-        citas_disponibles.generar_citas_falsas()
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+ 
         actualizar_cantidad()
     }
     
@@ -35,13 +32,11 @@ class ViewController: UIViewController {
     @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue)
     {
         if let pantalla_cita = segue.source as? ControladorGeneradorCita {
-                // Solo agrega la cita si se ha creado una
-                if let citaCreada = pantalla_cita.cita_creada {
-                    citas_disponibles.agregar_cita(citaCreada)
+                    if let citaCreada = pantalla_cita.cita_creada {
+                        citas_disponibles.agregar_cita(citaCreada)
+                    }
                 }
+                actualizar_cantidad()
             }
-            actualizar_cantidad()
-    }
-    
 }
 
