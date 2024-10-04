@@ -20,33 +20,31 @@ class ControladorGeneradorCita: UIViewController{
        
        @IBAction func agregar_cita_nueva(_ sender: UIButton) {
            if let quienLoDijo = quien_lo_dijo_view.text, !quienLoDijo.isEmpty,
-                      let queDijo = que_es_lo_que_dijo.text, !queDijo.isEmpty {
-                       
-                       cita_creada = Cita(quien_lo_dijo: quienLoDijo, que_dijo: queDijo)
-                       
-                       performSegue(withIdentifier: "irAPantallaCitas", sender: self)
-                   } else {
-                       mostrar_alerta_error()
-                   }
-       }
-    
-    func mostrar_alerta_error() {
-            let alerta = UIAlertController(title: "Error", message: "Los campos no pueden estar vacíos.", preferredStyle: .alert)
-            alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alerta, animated: true, completion: nil)
-        }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "irAPantallaCitas" {
-               if let destinoVC = segue.destination as? ControladorPantallaCitas {
-    
-                   if let cita = cita_creada {
-                       destinoVC.cita_actual = cita
-                   }
-               }
-           }
-       }
+                     let queDijo = que_es_lo_que_dijo.text, !queDijo.isEmpty {
+                      let citaCreada = Cita(quien_lo_dijo: quienLoDijo, que_dijo: queDijo)
+               GuardarCita.shared.agregarCita(citaCreada)
+               
+                      performSegue(withIdentifier: "irAPantallaCitas", sender: self)
+                  } else {
+                      mostrar_alerta_error()
+                  }
+              }
 
-       override func viewDidLoad() {
-           super.viewDidLoad()
-       }
+              func mostrar_alerta_error() {
+                          let alerta = UIAlertController(title: "Error", message: "Los campos no pueden estar vacíos.", preferredStyle: .alert)
+                          alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                          present(alerta, animated: true, completion: nil)
+                      }
+              override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                  if segue.identifier == "irAPantallaCitas" {
+                      if let destinoVC = segue.destination as? ControladorPantallaCitas {
+                          destinoVC.citas = GuardarCita.shared.citas
+                      }
+                  }
+              }
+   
+              override func viewDidLoad() {
+                  super.viewDidLoad()
+              }
+              
 }

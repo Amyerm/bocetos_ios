@@ -18,25 +18,19 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
  
-        actualizar_cantidad()
     }
     
-    func actualizar_cantidad(){
-        labelcito.text = String(citas_disponibles.citas_creadas.count)
-        }
-
     @IBSegueAction func al_abrir_pantalla_citas(_ coder: NSCoder) -> ControladorPantallaCitas? {
-        return ControladorPantallaCitas(cita_para_citar: citas_disponibles.obtener_cita_aleatoria(), coder: coder)
-    }
+        let citas = citas_disponibles.citas_creadas
+                let destinoVC = ControladorPantallaCitas(coder: coder)!
+                destinoVC.citas = citas
+        
+                return destinoVC
+            }
     
     @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue)
     {
-        if let pantalla_cita = segue.source as? ControladorGeneradorCita {
-                    if let citaCreada = pantalla_cita.cita_creada {
-                        citas_disponibles.agregar_cita(citaCreada)
-                    }
-                }
-                actualizar_cantidad()
-            }
+        
+    }
 }
 

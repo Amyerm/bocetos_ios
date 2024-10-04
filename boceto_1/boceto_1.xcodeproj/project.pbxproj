@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB7A0CA62CA1C2160013C0AD /* ControladorPantallaCitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A0CA52CA1C2160013C0AD /* ControladorPantallaCitas.swift */; };
+		FB8720EB2CB04C1100F2FFE0 /* GuardarCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8720EA2CB04C1100F2FFE0 /* GuardarCita.swift */; };
 		FBCA37CA2C9B2B7300985A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37C92C9B2B7300985A27 /* AppDelegate.swift */; };
 		FBCA37CC2C9B2B7300985A27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37CB2C9B2B7300985A27 /* SceneDelegate.swift */; };
 		FBCA37CE2C9B2B7300985A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA37CD2C9B2B7300985A27 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		FB7A0CA52CA1C2160013C0AD /* ControladorPantallaCitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaCitas.swift; sourceTree = "<group>"; };
+		FB8720EA2CB04C1100F2FFE0 /* GuardarCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardarCita.swift; sourceTree = "<group>"; };
 		FBCA37C62C9B2B7300985A27 /* boceto_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boceto_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCA37C92C9B2B7300985A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCA37CB2C9B2B7300985A27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCA37FD2C9B36E600985A27 /* generador_de_citas.swift */,
+				FB8720EA2CB04C1100F2FFE0 /* GuardarCita.swift */,
 			);
 			path = controlador;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8720EB2CB04C1100F2FFE0 /* GuardarCita.swift in Sources */,
 				FBCA37CE2C9B2B7300985A27 /* ViewController.swift in Sources */,
 				FBCA37CA2C9B2B7300985A27 /* AppDelegate.swift in Sources */,
 				FBCA37FE2C9B36E600985A27 /* generador_de_citas.swift in Sources */,
